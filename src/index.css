@@ -1,13 +1,143 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  color:#F6F5F5;
+  font-family: "Caudex", serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #F6F5F5;
+  height: 100vh;
+}
+
+#page {
+  position: relative;
+}
+
+#upper-page {
+  background-color: #0C359E;
+  height: 50vh;
+  padding: 6px 22%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#header > ul {
+  padding-top: 8px;
+  display: flex;
+  gap: 2rem;
+  margin-right: 5rem;
+}
+
+#header > ul > li {
+  list-style-type: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.text {
+  margin-top: 6vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text > h1 {
+  font-size: 48px;
+}
+
+.text > h3 {
+  font-size: 36px;
+}
+
+/* converter */
+#converter {
+  background-color: #F6F5F5;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.7);
+  width: 60%;
+  height: 350px;
+  padding-top: 50px;
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  border-radius: 32px;
+}
+
+#converter > form {
+  display: flex;  
+  justify-content: space-around;
+  align-items: start;
+  position:relative;
+  height: 100%;
+}
+
+#converter > form > input[type=submit] {
+  position:absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  width: 280px;
+  padding: 15px;
+  background-color: #0C359E;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#converter > form > .field > h2, #converter > form > .field > input {
+  color: #353434;
+  font-size: 36px;
+  text-transform: capitalize;
+}
+
+#converter > form > .field > input {
+  font-size: 24px;
+  padding: 10px;
+  border: 1px solid #C5C5C5;
+  border-radius: 12px;
+}
+
+#converter > form > .field > input:focus {
+  border: 1px solid #0C359E !important;
+}
+
+.active-button {
+  margin-left: 20%;
+}
+
+.result {
+  color: black;
+  position:absolute;
+  font-size: 48px;
+  top:38%;
+  left:3%;
+}
+
+.from-to, .to-from {
+  top: 54%;
+  color:#5f5d5d;
+  font-size: 22px;
+}
+
+.to-from {
+  top: 62%;
+}
+
+.bs{
+  top:70%
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
